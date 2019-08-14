@@ -30,6 +30,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
+    _getBatteryLevel();
   }
 
   @override
@@ -40,7 +41,10 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
       ),
       home: Center(
-        child: Text('Battery Level: $_batteryLevel'),
+        child: Text(
+          'Battery Level: $_batteryLevel%',
+          style: TextStyle(fontSize: 25),
+        ),
       ),
     );
   }
